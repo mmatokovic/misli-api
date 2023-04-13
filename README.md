@@ -1,7 +1,14 @@
 # Misli API
 
-# Command I used for init project
+### Command I used for init project
 `mix phx.new misli-api --no-install --app  misli_api --database postgres --no-live --no-assets --no-html --no-dashboard --no-mailer --binary-id`
+
+### Generates controller, JSON view, and context for a JSON resource
+`mix phx.gen.json Accounts(accounts modules) Account(schima file) accounts(table created) `
+
+### In CMD open
+`iex -S mix`
+`MisliApi.Accounts.create_account(%{email: "test@example.com", hash_password: "thisishasedpassword"})`
 
 To start your Phoenix server:
 
