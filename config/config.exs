@@ -26,6 +26,12 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Guardian to create secret_key use `mix guardian.gen.seacret`
+config :misli_api, MisliApiWeb.Auth.Guardian,
+  issuer: "misli_api",
+  secret_key: "VYVd4SBK9A4xOsqAcHea6WMeggPXVi84Z8XvBxGCOG5/Iw9RSwH45Gyqn34zAqPO"
+
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 

@@ -5,10 +5,14 @@
 
 ### Generates controller, JSON view, and context for a JSON resource
 `mix phx.gen.json Accounts(accounts modules) Account(schima file) accounts(table created) `
-
+choco install VisualCppBuildTools -y
 ### In CMD open
 `iex -S mix`
 `MisliApi.Accounts.create_account(%{email: "test@example.com", hash_password: "thisishasedpassword"})`
+
+### Then just run docker-compose build and docker-compose up
+
+`docker exec -it ba66e363254e4a8c81bdeef8e835dd84c6e71e51d466c0d973dca2f47cdebb5a bash`
 
 To start your Phoenix server:
 

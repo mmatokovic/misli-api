@@ -30,6 +30,7 @@ defmodule MisliApi.MixProject do
   # Specifies your project dependencies.
   #
   # Type `mix help deps` for examples and options.
+  # Affter adding dependencie `mix deps.get`
   defp deps do
     [
       {:phoenix, "~> 1.7.2"},
@@ -40,7 +41,9 @@ defmodule MisliApi.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:guardian, "~> 2.3"},
+      {:bcrypt_elixir, "~> 3.0"}
     ]
   end
 

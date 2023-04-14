@@ -1,6 +1,22 @@
 version: '3.8'
 
 services:
+  phoenix:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: misli_api_dev
+      PGHOST: db
+      PGPORT: 5432
+    depends_on:
+      - db
+    command:
+      - "./entrypoint.sh"
   db:
     image: postgres
     restart: always
@@ -10,8 +26,4 @@ services:
     ports:
       - '5432:5432'
     volumes: 
-      - db:/var/lib/postgresql/data
-
-volumes:
-  db:
-    driver: local
+      - ./_pgdata:/var/lib/postgresql/data
