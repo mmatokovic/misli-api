@@ -13,4 +13,6 @@ The following guides illustrate how to use some features concretely:
 
 psql -U postgres misli_api_dev
 
+mix phx.gen.json Accounts Account accounts name:string
+mix phx.gen.json Users User users name:string email:string account:references:accounts information:string disabled:boolean
 * []()

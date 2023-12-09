@@ -7,6 +7,8 @@ defmodule MisliApiWeb.Router do
 
   scope "/api", MisliApiWeb do
     pipe_through :api
-    get "/", DefaultJSON, :index
+
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/accounts", AccountController, except: [:new, :edit]
   end
 end
